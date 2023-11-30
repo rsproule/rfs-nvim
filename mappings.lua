@@ -37,4 +37,9 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  i = {
+    ["<C-l>"] = { "copilot#Accept()", silent = true, expr = true },
+    ["<C-j>"] = { "copilot#Next()", silent = true, expr = true },
+    ["<C-k>"] = { "copilot#Previous()", silent = true, expr = true },
+  },
 }
