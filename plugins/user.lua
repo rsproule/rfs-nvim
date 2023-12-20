@@ -37,4 +37,9 @@ return {
     event = "VeryLazy",
     autoStart = true,
   },
+  {
+    "wakatime/vim-wakatime",
+    lazy = false,
+    config = function() end,
+  },
 }
