@@ -30,7 +30,6 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    ["<leader>h"] = { "treesitter#Open()" },
     ["<leader>k"] = {
       name = "ChatGPT",
       c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
@@ -46,6 +45,11 @@ return {
       x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain Code", mode = { "n", "v" } },
       r = { "<cmd>ChatGPTRun roxygen_edit<CR>", "Roxygen Edit", mode = { "n", "v" } },
       l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
+    },
+    ["<leader>P"] = {
+      name = "Python",
+      i = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Pick Env" },
+      d = { "<cmd>lua require('swenv.api').get_current_venv()<cr>", "Show Env" },
     },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
